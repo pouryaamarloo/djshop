@@ -8,6 +8,9 @@ class Category(MP_Node):
     is_public=models.BooleanField(default=True)
     slug=models.SlugField()
 
+    def __str__(self):
+        return (f'{self.title} ({self.slug} , {self.is_public})')
+
 
     class Meta:
         verbose_name = "Categorie"
