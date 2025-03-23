@@ -1,5 +1,5 @@
 # Use Python Slim Buster image
-FROM python:3.9-slim-buster
+FROM python:3.10-slim-buster
 
 LABEL maintainer="bigdeli.ali3@gmail.com"
 
@@ -48,3 +48,4 @@ EXPOSE 8000
 
 # Run the application
 CMD ["bash", "/scripts/run.sh"]
+

@@ -38,3 +38,15 @@ class CategoryTreeSerializer(serializers.ModelSerializer):
 
 CategoryTreeSerializer.get_children=extend_schema_field(serializers.ListField(child=CategoryTreeSerializer()))(CategoryTreeSerializer.get_children)
 
+class NodeCategoryTreeSerializer(serializers.ModelSerializer):
+
+
+    class Meta:
+        model=Category
+        fields='__all__'
+
+class ModificationTreeSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model=Category
+        fields=fields = ('id','title','is_public',)
