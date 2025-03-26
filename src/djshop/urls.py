@@ -38,3 +38,8 @@ spec_urls = [
 urlpatterns = [
     path('admin/', admin.site.urls),
 ] + front_urls + admin_urls + spec_urls
+
+admin.site.site_header = 'DjShop'
+admin.site.site_title = 'DjShop'
+admin.site.index_title = 'DjShop'
+
